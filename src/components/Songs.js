@@ -8,6 +8,6 @@ const Song=({currentSong})=>{
  <h3>{currentSong.artist}</h3>
 </div>
     )
-}
+} 
 
 export default Song
