@@ -25,7 +25,7 @@ function childHop(){
         audio:"https://mp3.chillhop.com/serve.php/?mp3=14984",
         id:uuidv4(),
         active:false,
-        color:['#AACEB0','#C6D7B5']
+        color:['#A958BE','#DD87E6']
     },
     {
         name:'Sunrise Hike',
