@@ -18,7 +18,7 @@ function childHop(){
         active:false,
         color:['#904E2B','#C49D73']
     },
-    {
+    { 
         name:'Roses n Flames',
         artist:'C Y G N',  
         cover:'https://chillhop.com/wp-content/uploads/2021/02/d12927eedcc2f5afba2ab049a4a1ea46c2266ae3-1024x1024.jpg',  
