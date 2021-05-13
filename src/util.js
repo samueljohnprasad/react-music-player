@@ -33,7 +33,7 @@ function childHop(){
         cover:'https://uploads-ssl.webflow.com/5fc4bca9bd65e8f2bf87f576/605072dd8914772a1df825a9_ow9bl5athaeho9m.jpg',  
         audio:"https://mp3.chillhop.com/serve.php/?mp3=12133",
         id:uuidv4(),
-        active:true,
+        active:false,
         color:['#AACEB0','#C6D7B5']
     },
     {
@@ -60,7 +60,7 @@ function childHop(){
         cover:'https://uploads-ssl.webflow.com/5fc4bca9bd65e8f2bf87f576/605072dd8914772a1df825a9_ow9bl5athaeho9m.jpg',  
         audio:"https://mp3.chillhop.com/serve.php/?mp3=12133",
         id:uuidv4(),
-        active:true,
+        active:false,
         color:['#AACEB0','#C6D7B5']
     },
     {
