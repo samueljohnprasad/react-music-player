@@ -5,6 +5,7 @@ import data from "./util";
 import React, { useState, useRef } from "react";
 import Library from "./components/Library";
 import Nav from './components/Nav'
+import updateLibrary from './components/utils'
 
 function App() {
   //use ref
@@ -37,7 +38,11 @@ function App() {
  const songEndHandler=async ()=>{
 
     let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
-     await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
+     let newSong=songs[(currentIndex + 1) % songs.length]
+     await setCurrentSong(newSong);
+     updateLibrary(newSong,setSongs,songs)
+
+     
      if(PluginArray) audioref.current.play()
    
 
@@ -63,6 +68,7 @@ function App() {
         audioref={audioref}
         setCurrentSong={setCurrentSong}
         isPlaying={isPlaying}
+        setIsPlaying={setIsPlaying}
         setSongs={setSongs}
         libraryStatus={libraryStatus}
       />

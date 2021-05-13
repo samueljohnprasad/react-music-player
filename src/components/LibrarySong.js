@@ -1,4 +1,5 @@
 import React from "react";
+import updateLibrary from './utils'
 
 
 const LibrarySong = ({
@@ -10,30 +11,21 @@ const LibrarySong = ({
   setCurrentSong,
   id,
   setSongs,
+  setIsPlaying
 }) => {
   const songSelectHandler = async () => {
     // const selectedSong=songs.filter((state)=> state.id===id)
     await setCurrentSong(song);
-    //add active state
-    const newSongs = songs.map((song) => {
-      if (song.id === id) {
-        //console.log('if',song.id,id)
-        return {
-          ...song,
-          active: true,
-        };
-      } else {
-        // console.log('else',song.id,id)
-        return {
-          ...song,
-          active: false,
-        };
-      }
-    });
-    console.log(newSongs);
-    setSongs(newSongs);
+    //add active state 
+    updateLibrary(song,setSongs,songs)
+    if(!isPlaying){
+    setIsPlaying(!isPlaying)
+    }
+    
 
     audioref.current.play();
+
+    
     //check if song is playing
 
     if(isPlaying) audioref.current.play()
